@@ -43,7 +43,7 @@ The investigation confirmed that Apache was inactive and was therefore not liste
 
 The Apache service was then restarted and the service and port availability were verified.
 
-![Diagnosis and service recovery](04-service-diagnosis.png)
+![Diagnosis and service recovery](04-service-diagnosis & recovered.png)
 
 
 ### Root Cause
@@ -58,7 +58,7 @@ The Apache service was restarted and HTTP port 80 was verified to be available.
 
 After the technical recovery, the public website was accessed again to confirm that the service had been successfully restored.
 
-![Website successfully recovered](06-website-recovered.png)
+![Website successfully recovered](05-website-recovered.png)
 
 **Evidence:** `06-website-recovered.png`
 
