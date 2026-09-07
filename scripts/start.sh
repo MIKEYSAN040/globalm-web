@@ -1,11 +1,5 @@
 #!/bin/bash
-
-echo "Starting Apache..."
+set -e
 
 systemctl enable httpd
-
-exit 1
-
 systemctl start httpd
-
-echo "Apache started successfully."
