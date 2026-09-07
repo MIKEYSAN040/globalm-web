@@ -1,5 +1,5 @@
-GlobalM — AWS CI/CD Web Deployment
-- Project Overview
+# GlobalM — AWS CI/CD Web Deployment
+## Project Overview
 
 GlobalM is a static website deployed on an Amazon EC2 instance using a fully automated CI/CD pipeline.
 
@@ -7,7 +7,7 @@ The project demonstrates how source-code changes can be automatically transferre
 
 The project also focuses on cloud support and troubleshooting practices, including service, networking, deployment, and application-level verification.
 
-Architecture
+## Architecture
 Developer
     │
     │ Git Push
