@@ -43,7 +43,7 @@ The investigation confirmed that Apache was inactive and was therefore not liste
 
 The Apache service was then restarted and the service and port availability were verified.
 
-![Diagnosis and service recovery](04-service-diagnosis-and-network-recovered)
+![Diagnosis and service recovery](04-service-diagnosis-and-network-recovered.png)
 
 
 ### Root Cause
