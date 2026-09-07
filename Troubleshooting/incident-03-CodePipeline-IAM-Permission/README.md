@@ -20,7 +20,7 @@ The pipeline failed during the Deploy stage with an **Insufficient permissions**
 
 The CodePipeline service role and its attached IAM policies were reviewed.
 
-![Service Role](02-service-role-permissions.png)
+![Service Role](02-pipeline-service-role.png)
 
 The IAM policy was inspected to identify the missing permission.
 
