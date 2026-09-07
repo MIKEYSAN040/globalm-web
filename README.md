@@ -11,21 +11,21 @@ The project also focuses on cloud support and troubleshooting practices, includi
 Developer
     │
     │ Git Push
-    v
+    -
 GitHub Repository
     │
     │ Source
-    v
+    -
 AWS CodePipeline
     │
     │ Deploy
-    v
+    -
 AWS CodeDeploy
     │
     │ Deployment
-    v
+    -
 Amazon EC2
     │
     │ Apache HTTP Server
-    v
+    -
 GlobalM Website
