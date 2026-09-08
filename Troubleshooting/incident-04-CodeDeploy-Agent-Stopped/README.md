@@ -21,13 +21,13 @@ I investigated the issue using the deployment status, CodeDeploy lifecycle event
 
 The deployment environment was prepared for incident reproduction.
 
-![Initial Setup](images/01-codedeploy-agent-running.png)
+![Initial Setup](01-codedeploy-agent-running.png)
 
 ### 2. Failure Condition Introduced
 
 The deployment environment was intentionally modified to reproduce a deployment-side failure.
 
-![Failure Condition](images/02-script-permission-removed.png)
+![Failure Condition](02-script-permission-removed.png)
 
 ### 3. Pipeline Deployment Failed
 
@@ -37,7 +37,7 @@ The Source stage completed successfully, but the Deploy stage failed.
 
 The pipeline reported a `HEALTH_CONSTRAINTS` deployment error.
 
-![Pipeline Deployment Failed](images/03-pipeline-deploy-failed.png)
+![Pipeline Deployment Failed](03-pipeline-deploy-failed.png)
 
 ### 4. Traced the Failure to CodeDeploy
 
@@ -49,7 +49,7 @@ Deployment:
 
 The target EC2 instance failed during the `ApplicationStop` lifecycle event.
 
-![CodeDeploy Deployment Failed](images/04-codedeploy-deployment-failed.png)
+![CodeDeploy Deployment Failed](04-codedeploy-deployment-failed.png)
 
 ### 5. Identified the Actual Error
 
@@ -57,7 +57,7 @@ The `ApplicationStop` event returned `UnknownError`.
 
 CodeDeploy reported that the **CodeDeploy Agent was not able to receive the lifecycle event** and recommended checking whether the agent was running and able to connect to the CodeDeploy service.
 
-![CodeDeploy Agent Error](images/05-codedeploy-agent-error.png)
+![CodeDeploy Agent Error](05-codedeploy-agent-error.png)
 
 ### 6. Confirmed the Root Cause on EC2
 
@@ -75,7 +75,7 @@ Active: inactive (dead)
 
 **Root Cause:** The CodeDeploy Agent was stopped, preventing the EC2 instance from receiving deployment lifecycle events.
 
-![CodeDeploy Agent Stopped](images/06-codedeploy-agent-stopped.png)
+![CodeDeploy Agent Stopped](06-codedeploy-agent-stopped.png)
 
 ---
 
@@ -94,7 +94,7 @@ The agent returned to:
 Active: active (running)
 ```
 
-![CodeDeploy Agent Restored](images/07-codedeploy-agent-restored.png)
+![CodeDeploy Agent Restored](07-codedeploy-agent-restored.png)
 
 ---
 
@@ -104,7 +104,7 @@ The deployment was retried after restoring the CodeDeploy Agent.
 
 The application deployment completed successfully, confirming that the remediation resolved the incident.
 
-![Deployment Successful](images/08-deployment-success.png)
+![Deployment Successful](08-deployment-success.png)
 
 ---
 
