@@ -5,7 +5,7 @@
 
 A production-style deployment was intentionally disrupted by stopping the **AWS CodeDeploy Agent** on the target EC2 instance.
 
-When a deployment was triggered through **GitHub → AWS CodePipeline → AWS CodeDeploy → EC2**, the deployment failed.
+When a deployment was triggered through **GitHub -> AWS CodePipeline -> AWS CodeDeploy -> EC2**, the deployment failed.
 
 I investigated the issue using the deployment status, CodeDeploy lifecycle events, and EC2 service status, identified the root cause, restored the agent, and successfully redeployed the application.
 
