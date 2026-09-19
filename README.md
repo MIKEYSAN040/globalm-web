@@ -25,13 +25,14 @@ The pipeline automatically takes application changes from GitHub and deploys the
 
 To demonstrate operational troubleshooting, five controlled incidents were introduced and resolved:
 
-Incident                                    | Area                       
+Incident                                                          
 
-01 - Apache Service Failure               Linux / Service Management 
-02 - Security Group Network Issue         AWS Networking             
-03 - CodePipeline IAM Permission Failure  IAM / CI/CD                
-04 - CodeDeploy Agent Stopped             Deployment Troubleshooting 
-05 - EC2 Application Unreachable          Application Availability   
+01 - Apache Service Failure             -    Linux / Service Management 
+02 - Security Group Network Issue       -    AWS Networking             
+03 - CodePipeline IAM Permission Failure-    IAM / CI/CD                
+04 - CodeDeploy Agent Stopped           -    Deployment Troubleshooting 
+
+05 - EC2 Application Unreachable        -    Application Availability   
 
 Each incident follows:
 
@@ -43,7 +44,7 @@ Each incident includes screenshots showing the **failure, investigation, root ca
 
 ##  Skills Demonstrated
 
-**CI/CD • AWS • EC2 • CodePipeline • CodeDeploy • IAM • Security Groups • Linux • Apache • Troubleshooting • Root Cause Analysis • Incident Response**
+**CI/CD, AWS, EC2, CodePipeline, CodeDeploy, IAM, Security Groups, Linux, Apache, Troubleshooting, Root Cause Analysis, Incident Response**
 
 ### Project Outcome
 
