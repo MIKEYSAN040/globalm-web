@@ -14,7 +14,7 @@ A hands-on AWS CI/CD project demonstrating how an application can be delivered f
 
 The EC2 server was prepared as the target environment for application deployment.
 
-![EC2 Instance Running](Deployment/01-ec2-instance-running.png)
+![EC2 Instance Running](01-ec2-instance-running.png)
 
  Verified the target EC2 infrastructure was running and ready to receive the application.
 
@@ -24,7 +24,7 @@ The EC2 server was prepared as the target environment for application deployment
 
 The CodeDeploy Agent was installed and verified on the EC2 server.
 
-![CodeDeploy Agent Running](Deployment/02-codedeploy-agent-running.png)
+![CodeDeploy Agent Running](02-codedeploy-agent-running.png)
 
  Confirmed the EC2 server was ready to receive automated deployments from AWS CodeDeploy.
 
@@ -34,7 +34,7 @@ The CodeDeploy Agent was installed and verified on the EC2 server.
 
 The application source code was maintained in GitHub and used as the starting point of the deployment pipeline.
 
-![GitHub Repository](Deployment/03_github_repository.png)
+![GitHub Repository](03_github_repository.png)
 
  Established a version-controlled source repository for the automated delivery workflow.
 
@@ -44,7 +44,7 @@ The application source code was maintained in GitHub and used as the starting po
 
 AWS CodePipeline was configured to retrieve the application and trigger the deployment process.
 
-![CodePipeline Success](Deployment/04_codepipeline_success.png)
+![CodePipeline Success](04_codepipeline_success.png)
 
  Validated the automated delivery pipeline from source code through the deployment workflow.
 
@@ -54,7 +54,7 @@ AWS CodePipeline was configured to retrieve the application and trigger the depl
 
 CodeDeploy successfully delivered the application to the EC2 target server.
 
-![Application Deployed](Deployment/05_ec2_deployed_application.png)
+![Application Deployed](05_ec2_deployed_application.png)
 
  Confirmed that the automated deployment successfully updated the target EC2 environment.
 
@@ -64,7 +64,7 @@ CodeDeploy successfully delivered the application to the EC2 target server.
 
 The deployed application was accessed successfully after the pipeline completed.
 
-![Live Website](Deployment/06_live_website_success.png)
+![Live Website](06_live_website_success.png)
 
  Completed end-to-end validation by confirming the application was available to users.
 
