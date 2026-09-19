@@ -1,46 +1,83 @@
-# Deployment Documentation
+# GlobalM Web – AWS CI/CD Deployment
 
-## Project
+A hands-on AWS CI/CD project demonstrating how an application can be delivered from **GitHub to a live Amazon EC2 server using AWS CodePipeline and CodeDeploy**.
 
-**GlobalM Web — AWS CI/CD Deployment**
+## Deployment Architecture
 
-This project demonstrates the deployment of a static website to an Amazon EC2 instance using an automated CI/CD pipeline.
+**GitHub -> CodePipeline -> S3 -> CodeDeploy -> EC2 -> Live Website**
 
-## Architecture
+---
 
-**GitHub -> AWS CodePipeline -> AWS CodeDeploy - EC2 -> Apache -> Website**
+## Deployment Flow
 
-## Deployment Components
+### 1. EC2 Environment Prepared
 
-* **GitHub** — Source code repository
-* **AWS CodePipeline** — Automates the deployment workflow
-* **AWS CodeDeploy** — Deploys application files to EC2
-* **Amazon EC2** — Hosts the web application
-* **Apache (httpd)** — Web server
-* **Security Group** — Controls inbound HTTP traffic on port 80
+The EC2 server was prepared as the target environment for application deployment.
 
-## Deployment Process
+![EC2 Instance Running](Deployment/01-ec2-instance-running.png)
 
-1. Application code is committed to GitHub.
-2. CodePipeline detects the change.
-3. CodePipeline creates the deployment artifact.
-4. CodeDeploy deploys the application to EC2.
-5. Apache serves the deployed website.
-6. The live application is validated through the public IP address.
+ Verified the target EC2 infrastructure was running and ready to receive the application.
 
-## Deployment Result
+---
 
-The application was successfully deployed and verified through the complete CI/CD workflow.
+### 2. CodeDeploy Agent Configured
 
-**Deployment Status:** Successful
-**Application Status:** Available
-**Deployment Target:** Amazon EC2
-**Web Server:** Apache
-**Protocol:** HTTP
+The CodeDeploy Agent was installed and verified on the EC2 server.
 
+![CodeDeploy Agent Running](Deployment/02-codedeploy-agent-running.png)
 
+ Confirmed the EC2 server was ready to receive automated deployments from AWS CodeDeploy.
 
-## Project Focus
+---
 
-**Deploy → Monitor → Troubleshoot → Resolve → Validate**
+### 3. GitHub Connected as Source
 
+The application source code was maintained in GitHub and used as the starting point of the deployment pipeline.
+
+![GitHub Repository](Deployment/03_github_repository.png)
+
+ Established a version-controlled source repository for the automated delivery workflow.
+
+---
+
+### 4. CI/CD Pipeline Successfully Executed
+
+AWS CodePipeline was configured to retrieve the application and trigger the deployment process.
+
+![CodePipeline Success](Deployment/04_codepipeline_success.png)
+
+ Validated the automated delivery pipeline from source code through the deployment workflow.
+
+---
+
+### 5. Application Deployed to EC2
+
+CodeDeploy successfully delivered the application to the EC2 target server.
+
+![Application Deployed](Deployment/05_ec2_deployed_application.png)
+
+ Confirmed that the automated deployment successfully updated the target EC2 environment.
+
+---
+
+### 6. Live Application Validated
+
+The deployed application was accessed successfully after the pipeline completed.
+
+![Live Website](Deployment/06_live_website_success.png)
+
+ Completed end-to-end validation by confirming the application was available to users.
+
+---
+
+## Key Skills Demonstrated
+
+**AWS, CI/CD, CodePipeline, CodeDeploy, EC2, S3, IAM, GitHub, Linux, Deployment Validation**
+
+## Deployment Outcome
+
+Successfully implemented and validated an automated deployment workflow:
+
+**Developer Commit -> GitHub -> CodePipeline -> CodeDeploy -> EC2 -> Live Application**
+
+This project demonstrates practical experience with **cloud deployment automation, infrastructure preparation, CI/CD workflows, and post-deployment validation**.
